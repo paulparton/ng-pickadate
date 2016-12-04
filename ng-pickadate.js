@@ -7,7 +7,7 @@
 
   angular.module('pickadate').provider('ngPickATime', pickATimeProvider);
 
-  angular.module('pickadate').directive('ngPickADate', ['$parse', 'pickADate', function ($parse, pickADate) {
+  angular.module('pickadate').directive('ngPickADate', ['$parse', 'ngPickADate', function ($parse, pickADate) {
     return {
       restrict: 'A',
       require: '?ngModel',
@@ -138,7 +138,7 @@
     };
   }]);
 
-  angular.module('pickadate').directive('pickATime', ['$parse', 'pickATime', function ($parse, pickATime) {
+  angular.module('pickadate').directive('ngPickATime', ['$parse', 'ngPickATime', function ($parse, pickATime) {
     return {
       restrict: 'A',
       require: '?ngModel',
