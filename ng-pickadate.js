@@ -14,7 +14,7 @@
       link: function (scope, element, attrs, ngModel) {
         var hasOnOpenRun = false;
         var model = {
-          pickADate: $parse(attrs.pickADate),
+          pickADate: $parse(attrs.ngPickADate),
           minDate: $parse(attrs.minDate),
           maxDate: $parse(attrs.maxDate),
           pickADateOptions: $parse(attrs.pickADateOptions)
@@ -103,7 +103,7 @@
         element.pickadate('picker').set('min', minDate ? minDate : false);
         element.pickadate('picker').set('max', maxDate ? maxDate : false);
 
-        scope.$watchGroup([attrs.pickADate, attrs.minDate, attrs.maxDate], function(newValues, oldValues) {
+        scope.$watchGroup([attrs.ngPickADate, attrs.minDate, attrs.maxDate], function(newValues, oldValues) {
           var newValue = newValues[0], newMin = newValues[1], newMax = newValues[2],
               oldValue = oldValues[0], oldMin = oldValues[1], oldMax = oldValues[2];
 
